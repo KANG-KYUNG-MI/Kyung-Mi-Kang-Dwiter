@@ -29,8 +29,6 @@ const validateSignup = [
     .optional({ nullable: true, checkFalsy: true }),
   validate,
 ];
-
-//validate
 router.post('/signup', validateSignup, authController.signup);
 
 router.post('/login', validateCredential, authController.login);
